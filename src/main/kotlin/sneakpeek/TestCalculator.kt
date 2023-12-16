@@ -7,6 +7,6 @@ class TestCalculator {
     }
 
     fun minus(first: Long, second: Long): Long {
-        return 1
+        return first - second
     }
 }
