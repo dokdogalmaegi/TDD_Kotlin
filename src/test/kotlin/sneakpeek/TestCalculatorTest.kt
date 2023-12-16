@@ -23,4 +23,11 @@ class TestCalculatorTest {
 
         assertThat(result).isEqualTo(expected)
     }
+
+    @Test
+    fun minus() {
+        val result = testCalculator.minus(2, 1)
+
+        assertThat(result).isEqualTo(1)
+    }
 }
