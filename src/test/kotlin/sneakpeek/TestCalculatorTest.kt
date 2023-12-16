@@ -30,4 +30,12 @@ class TestCalculatorTest {
 
         assertThat(result).isEqualTo(1)
     }
+
+    @ParameterizedTest
+    @CsvSource("2, 1, 1", "5, 3, 2", "10, 5, 5")
+    fun minus2(first: Long, second: Long, expected: Long) {
+        val result = testCalculator.minus(first, second)
+
+        assertThat(result).isEqualTo(expected)
+    }
 }
