@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
 
-class TestCalculatorTest {
+class CalculatorTest {
 
-    private val testCalculator = TestCalculator()
+    private val calculator = Calculator()
 
     @Test
     fun plus() {
-        val result = testCalculator.plus(1, 2)
+        val result = calculator.plus(1, 2)
 
         assertThat(result).isEqualTo(3)
     }
@@ -19,14 +19,14 @@ class TestCalculatorTest {
     @ParameterizedTest
     @CsvSource("1, 2, 3", "2, 3, 5", "4, 5, 9")
     fun plus2(first: Long, second: Long, expected: Long) {
-        val result = testCalculator.plus(first, second)
+        val result = calculator.plus(first, second)
 
         assertThat(result).isEqualTo(expected)
     }
 
     @Test
     fun minus() {
-        val result = testCalculator.minus(2, 1)
+        val result = calculator.minus(2, 1)
 
         assertThat(result).isEqualTo(1)
     }
@@ -34,7 +34,7 @@ class TestCalculatorTest {
     @ParameterizedTest
     @CsvSource("2, 1, 1", "5, 3, 2", "10, 5, 5")
     fun minus2(first: Long, second: Long, expected: Long) {
-        val result = testCalculator.minus(first, second)
+        val result = calculator.minus(first, second)
 
         assertThat(result).isEqualTo(expected)
     }

@@ -1,6 +1,6 @@
 package sneakpeek
 
-class TestCalculator {
+class Calculator {
 
     fun plus(first: Long, second: Long): Long {
         return first + second
